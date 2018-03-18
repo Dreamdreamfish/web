@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+	<meta charset="UTF-8">
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<video id="movies" autoplay oncanplay="startVideo()" onended="stopTimeLine()" autobuffer="true" width="400px" height="300px">
+		<source src="">
+		<source src="">
+	</video>
+	<canvas id="timeline" width="400px" height="300px"></canvas>
+</body>
+<script type="text/javascript">
+    // 抓取帧的时间间隔，单位是ms
+    var updateInterval = 5000;
+
+    // 时序中帧的尺寸
+    var frameWidth = 100;
+    var frameHeight = 75;
+
+    // 时序的总帧数
+    var frameRows = 4;
+    var frameColumns = 4;
+    var frameGrid = frameRows + frameColumns;
+
+    // 当前帧
+    var frameCount = 0;
+
+    // 播放完后取消计时器
+    var intervalid;
+    var videoStarted = false;
+
+    function updateFrame() {
+    	var video = document.getElementById("movies");
+    	var timeline = document.getElementById("timeline");
+    	var cxt = timeline.getContext("2d");
+    	var 
+    }
+    
+	var ctx = time
+</script>
+</html>

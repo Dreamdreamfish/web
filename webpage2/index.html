@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DIONE</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <style>
+        .hid {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainBg">
+
+        <!-- S=welcom -->
+        <div id="welcom">
+            <div class="img_top"></div>
+            <div class="thanks">
+                <div>
+                    <h2>Dear friend, Welcom you back!</h2>
+                    <span>hope that you enjoy it well! Have a good time</span>
+                </div>
+                <div>
+                    <input type="button" name="welcom" value="welcom">
+                </div>
+            </div>
+        </div>
+        <!-- E=welcom -->
+
+        <div class="main">
+        <!-- S = top -->
+            <div class="top">
+                <div class="top_logo fl">
+                    <a href="#"><img src="images/logo.png"></a>
+                </div>
+                <div class="top_activity fl">
+                    <div class="top_activity_l fl">
+                        <a href="#"><b></b></a>Activity
+                    </div>
+                    <div class="top_activity_r fr">
+                        <ul>
+                            <li><input type="button" name="createProject" value="Create Project"></li>
+                            <li><a href="#"><b id="bell"></b></a></li>
+                            <li><a href="#"><b id="message"></b></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="top_user fl"><a href="#"><b></b></a>BRAD PITT</div>
+            </div>
+        <!-- E = top -->
+
+
+        <!-- S = left -->
+            <div class="project fl">
+                <ul>
+                    <li><a href="#"><b class="project1"></b>DASHBOARD</a></li>
+                    <li><a href="#"><b class="project2"></b>FEED</a></li>
+                    <li><a href="#"><b class="project3"></b>STATISTICS</a></li>
+                    <li><a href="#"><b class="project4"></b>TEAMS</a></li>
+                    <li><a href="#"><b class="project5"></b>PROJECTS</a></li>
+                    <li><a href="#"><b class="project6"></b>SETTINGS</a></li>
+                </ul>
+                <div class="sign_out">
+                    <a href="#"></a>
+                </div>
+            </div>
+        <!-- E = left -->
+
+
+        <!-- S = center -->
+            <div class="center fl">
+                <div class="center_top">
+                    <div class="center_top_l fl">
+                        <h2>Lorem Stats</h2>
+                        <span>September 15 - September 30</span>
+                    </div>
+                    <div class="center_top_r fr">
+                        <form>
+                            <div>
+                            type:<select name="type" >
+                                    <option value="Notifications">Notifications</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div>
+                                sort:<select name="sort">
+                                    <option value="Comments">Comments</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="picture"></div>
+                <div class="analyze">
+                    <ul>
+                        <li>3214</li>
+                        <li>9845</li>
+                        <li>1249</li>
+                        <li>321469</li>
+                    </ul>
+                </div>
+            </div>
+        <!-- E = center -->
+
+
+        <!-- S = right -->
+            <div class="left fl">
+                <div class="menu">
+                    <h2>RECENT ACYIVITY</h2>
+                    <ul>
+                        <li><b class="jolie"></b><span class="name">Angelina Jolie</span><br>
+                            <span class="act">liked your post</span></li>
+                        <li><b class="cooper"></b><span class="name">Bradley Cooper</span><br>
+                            <span class="act">commented your profile</span></li>
+                        <li><b class="aniston"></b><span class="name">Jenifer Aniston</span><br>
+                            <span class="act">starded following you</span></li>
+                        <li><b class="laurie"></b><span class="name">Hugh Laurie</span><br>
+                            <span class="act">commented your profile</span></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <h2>YOUR TEAM</h2>
+                    <ul>
+                        <li><b class="jolie"></b><span class="name">Angelina Jolie</span><br>
+                            <span class="act">CEO&Founder</span></li>
+                        <li><b class="cooper"></b><span class="name">Bradley Cooper</span><br>
+                            <span class="act">Social Media Specialist</span></li>
+                        <li><b class="aniston"></b><span class="name">Jenifer Aniston</span><br>
+                            <span class="act">Moderator</span></li>
+                        <li><b class="laurie"></b><span class="name">Hugh Laurie</span><br>
+                            <span class="act">Graphic Designer</span></li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <input type="button" name="" value="VIEW MORE">
+                </div>
+            </div>
+        <!-- E = right -->
+        </div>
+    </div>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $(".thanks input").click(function(){
+                $("#welcom").addClass("hid")
+            })
+        });
+    </script>
+</body>
+</html>

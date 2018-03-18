@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcom</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .bg {
+            width: 1366px;
+            height: 662px;
+            background: url("images/bg2.jpg");
+            position: relative;
+        }
+        .log {
+            width: 400px;
+            height: 480px;
+            top: 80px;
+            left: 50%;
+            margin-left: -200px;
+            position: relative;
+            background-color: #FFFFFF;
+        }
+        .log .top {
+            width: 400px;
+            height: 40px;
+            font-size: 30px;
+            color: #dc273f;
+            border-bottom: 1px solid #e4eaf4;
+            margin-bottom: 30px;
+            text-align: center;
+            padding-top: 25px;
+        }
+        span {
+            display: block;
+            width: 2400px;
+            height: 14px;
+            font-size: 14px;
+            color: #000000;
+            margin-left: 60px;
+        }
+        input {
+            display: block;
+            width: 270px;
+            height: 40px;
+            font-size: 20px;
+            color: #b9bcd1;
+            border: 1px solid #aec1e2;
+            margin-left: 50px;
+            padding-left: 30px;
+            background: url("");
+        }
+        input:last-child {
+            width: 300px;
+            border: none;
+            background-color: #dc273f;
+            color: #FFFFFF;
+            margin-top: px;
+            padding-left: 0px;
+        }
+        .reg {
+            width: 400px;
+            height: 40px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .reg a {
+            color: #000000;
+            font-size: 20px;
+        }
+        .red {
+            border-color: red;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+                /*var xhr;
+                var username_value = $("input:nth-child(1)").val();
+                var pwd_value = $("input:nth-child(2)").val();
+                try {
+                    xhr = new XMLHttpRequest();
+                } catch (e) {
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xhr.onreadystatechange = function() {
+                    if(xhr.readyState == 4) {
+                        if (xhr.status == 200) {
+                            var data = xhr.responseText;
+                            id_result(data);
+                        }
+                    }
+                }
+                xhr.open("post","Check_UserName.asp");
+                xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+                xhr.send("username="+username_value+"&&pwd="+pwd_value);
+            }
+            function id_result(data) {
+                var resultbox = $("span_UserName");
+                if(data == 1) {
+                    resultbox.text("用户名或密码错误");
+                    return true;
+                } else {
+                    resultbox.text("该用户名已注册");
+                    return false;
+                }*/
+
+
+
+            $(".user_name").focus(function(){
+                $(this).val("");
+            });
+            $(".pass_word").focus(function(){
+                $(this).val("");
+            });
+            $("#sub").click(function(){
+                var flag = false;
+                var username_value = $(".user_name").val();
+                var pwd_value = $(".pass_word").val();
+                if (username_value == ""||username_value == "username") {
+                    $(".span_user").html("Please enter your user name");
+                    $(".user_name").addClass("red");
+                    $(".user_name").focus();
+                    return;
+                } else {
+                    flag = true;
+                }
+                if (pwd_value == ""||pwd_value == "password") {
+                    $(".span_pwd").html("Please enter your password");
+                    $(".pass_word").addClass("red");
+                    $(".pass_word").focus();
+                    return;
+                } else {
+                    flag = true;
+                }
+                if(flag) {
+                    $.post("",{username:username_value,pwd:pwd_value},function(data){
+                        var icon = $(".con");
+                        if(login) {
+                            location = index.html;
+                        } else {
+                            icon.html("账号或密码错误！")
+                        }
+                    })
+                }
+
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="bg">
+    <div class="log">
+        <div class="top">Welcom!</div>
+        <form method="post" autocomplete="off">
+            <span class="con"></span>
+            <input class="user_name" type="text" name="username" value="username"><br>
+            <span class="span_user"></span><br>
+            <input class="pass_word" type="password" name="pwd" value="password"><br>
+            <span class="span_pwd"></span><br>
+            <input id="sub" type="button" name="sub" value="Login">
+        </form>
+        <div class="reg">
+            <a href="#">Register</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
